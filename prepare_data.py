@@ -1,6 +1,6 @@
 # No need to run this unless you want to recreate "bigrams.tsv"
 # Expects do find the [aligned Bach chorales dataset](https://github.com/johentsch/aligned_bach_chorales/)
-# in a directory called "bach"
+# in a directory called `./aligned_bach_chorales`.
 
 import pandas as pd
 import numpy as np
@@ -8,7 +8,12 @@ import pitchtypes as pty
 
 # load Bach chorales:
 names = [f"chor{i:03}" for i in range(1,101)]
-piece_dfs = [pd.read_csv(f"bach/data/craigsapp_krn/notes/{name}.tsv", sep='\t') for name in names]
+piece_dfs = [pd.read_csv(f"aligned_bach_chorales/data/craigsapp_krn/notes/{name}.tsv", sep='\t') for name in names]
+
+# # load ABC
+# names = [f"n01op18-1_0{i}" for i in [1,2,3,4]]
+# piece_dfs = [pd.read_csv(f"ABC/notes/{name}.tsv", sep='\t') for name in names]
+
 df = pd.concat(piece_dfs, keys=names, names=["piece", "note"])
 
 def note_bigrams(piece_df):
@@ -42,6 +47,7 @@ def bigrams_to_distance(df):
     df["int_fifths"] = fifths
     df["int_octaves"] = octs
     df["int_semitones"] = fifths * 7 + octs * 12
+    df["dist_semitones"] = df["int_semitones"].abs()
     return df
 
 dists = bigrams_to_distance(bg)
