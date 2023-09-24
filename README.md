@@ -15,6 +15,6 @@ have a look at [`prepare_data.py`](prepare_data.py).
 
 If you are interested in using probabilistic models and Bayesian statistics for musical research
 (e.g. for corpus studies or computational models of music theory),
-feel free to reach out to us:
+feel free to get in touch with us:
 - Christoph Finkensiep (c.finkensiep@uva.nl)
 - Martin Rohrmeier (martin.rohrmeier@epfl.ch)
