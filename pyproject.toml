@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gmth-bayes-tutorial"
+version = "0.0.1"
+dependencies = [
+  "pymc>=5",
+  "arviz",
+  "ipykernel",
+  "pandas",
+  "pytensor",
+  "pyro-ppl",
+  "numpyro",
+  "seaborn",
+  "pitchtypes",
+  "tqdm"
+]
+
+[project.optional-dependencies]
+dev = ["pip-tools"]
+
+[tool.pip-tools]
+generate-hashes = true
