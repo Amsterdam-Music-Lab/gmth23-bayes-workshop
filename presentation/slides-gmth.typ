@@ -651,8 +651,8 @@
 #focus-slide(background: black)[
   Ausführliches Beispiel: Notebook
 
-  #link("https://github.com/Amsterdam-Music-Lab/gmth23-bayes-workshop/blob/main/models.ipynb")[
-    #image("img/qr-notebook.png", width:8cm)
+  #link("https://github.com/Amsterdam-Music-Lab/gmth23-bayes-workshop/")[
+    #image("img/qr-repo.png", width:8cm)
   ]
 ]
 

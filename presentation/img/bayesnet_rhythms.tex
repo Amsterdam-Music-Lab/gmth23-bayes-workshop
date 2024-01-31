@@ -1,0 +1,22 @@
+\documentclass[
+  convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}}
+]{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{bayesnet}
+
+\begin{document}
+
+\begin{tikzpicture}[]
+  \node[latent] (reg) at (0,0) {$r$};
+  \node[obs] (pattern) at (1.5,0) {$p$};
+  \edge {reg} {pattern};
+
+  \plate {patterns} {(pattern)} {pattern};
+  \plate {groups} {(patterns) (reg)} {group};
+\end{tikzpicture}
+
+\end{document}
+%%% Local Variables:
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
