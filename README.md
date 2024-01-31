@@ -15,7 +15,7 @@ The repo is organized as follows:
   The solution to this exercise can be found in [`intervals_exercise_solution.ipynb`](intervals_exercise_solution.ipynb).
 - [`intervals_complete.ipynb`](intervals_complete.ipynb)
   contains an additional model comparison that is not part of the exercise notebook.
-- The dataset (`bigrams.tsv`) have been derived from the
+- The dataset [`bigrams.tsv`](bigrams.tsv) has been derived from the
   [aligned Bach chorale dataset](https://github.com/johentsch/aligned_bach_chorales/).
   If you want to know how exactly the bigrams are computed,
   have a look at [`prepare_data.py`](prepare_data.py).
